@@ -1,0 +1,5 @@
+*.hdr
+*.ark
+xenia.log
+recent.toml
+_xenia\cache
