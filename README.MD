@@ -1,4 +1,4 @@
-## MiloWMV is based on *Guitar Hero II*, developed by Harmonix Music Systems.
+## MiloWMV is based on *Guitar Hero II*.
 
 ### *Executable patches applied:*
 
