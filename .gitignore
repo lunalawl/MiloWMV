@@ -3,3 +3,4 @@
 xenia.log
 recent.toml
 _xenia\cache
+_xenia/cache/*
