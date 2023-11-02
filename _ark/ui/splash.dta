@@ -27,9 +27,8 @@
       {gamecfg set mode quickplay})}
 #define CUT_SCENE_VIDEO
 (dummy.dat)
-{new
-   GHScreen
-   cut_scene_screen
+#define CUT_SCENE_VIDEO_SCREEN
+(
    (allow_back FALSE)
    (animate_transition FALSE)
    (poll_count 2)
@@ -51,10 +50,25 @@
             {==
                0
                [poll_count]}
-            {$this play_movie}}})
+            {$this play_movie}
+         }
+      }
+   )
+)
+{new
+   GHScreen
+   cut_scene_screen
+   CUT_SCENE_VIDEO_SCREEN
    (play_movie
       {meta play_movie CUT_SCENE_VIDEO}
-      {ui goto_screen splash_screen})}
+      {ui goto_screen cut_scene_screen_1})}
+{new
+   GHScreen
+   cut_scene_screen_1
+   CUT_SCENE_VIDEO_SCREEN
+   (play_movie
+      {meta play_movie CUT_SCENE_VIDEO}
+      {ui goto_screen cut_scene_screen})}
 #define DELAY_BEFORE_ATTRACT_SEC
 (60)
 {new
